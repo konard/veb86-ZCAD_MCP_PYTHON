@@ -1,0 +1,2 @@
+# ZCAD_MCP_PYTHON
+MCP для ZCAD на Python
