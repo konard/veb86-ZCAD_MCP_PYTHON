@@ -167,3 +167,5 @@ def setup_logging(level: str = "INFO") -> None:
     root.handlers[:] = [handler]
     root.setLevel(getattr(logging, level, logging.INFO))
     root.propagate = False
+    # httpx logs every request at INFO; Bridge errors are logged by zcad_mcp itself.
+    logging.getLogger("httpx").setLevel(logging.WARNING)
